@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) {
+
         Student st1 = new Student("Uliana", 25, 2);
         Student st2 = new Student("Elina", 24, 4);
         Student st3 = new Student("Pavel", 27, 3);

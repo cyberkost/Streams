@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
+
         Stream<String> stream = Stream.of("we", "wee", "qwer", "oooo");
         Map<Integer, List<String>> map = stream
                 .collect(Collectors.groupingBy(e -> e.length()));

@@ -7,7 +7,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
-
     public static void main(String[] args) {
 
         List<String> list = Arrays.asList("A", "A", "G", "G", "T", "F", "F", "D", "D", "V", "V", "A", "A");
