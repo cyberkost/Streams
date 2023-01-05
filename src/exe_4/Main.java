@@ -1,5 +1,6 @@
 package exe_4;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -14,7 +15,7 @@ public class Main {
         List<String> list = map
                 .entrySet()
                 .stream()
-                .max((o1, o2) -> o1.getKey() - o2.getKey())
+                .max(Comparator.comparingInt(Map.Entry::getKey))
                 .map(e -> e.getValue())
                 .get();
         System.out.println(list);
