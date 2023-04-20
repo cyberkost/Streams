@@ -13,8 +13,11 @@ public class Main {
                 "Integer eu feugiat tellus. Nam dolor molestie diam sed libero egestas Pellentesque, pellentesque. pellentesque  " +
                 "Nulla.";
         String[] words = text.split("\\s+");
+        long uniqueWords = Arrays.stream(words).distinct().count();
+        System.out.println("Unique words in text: " + uniqueWords);
         Map<String, Long> wordCounts = Arrays.stream(words)
                 .map(w -> w.replaceAll("[^a-zA-Z]", "").toLowerCase())
+                .filter(w -> w.length() > 3)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println("Words in text: " + words.length);
         wordCounts.entrySet().stream()
