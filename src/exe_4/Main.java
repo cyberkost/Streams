@@ -11,7 +11,7 @@ public class Main {
 
         Stream<String> stream = Stream.of("we", "wee", "qwer", "oooo");
         Map<Integer, List<String>> map = stream
-                .collect(Collectors.groupingBy(e -> e.length()));
+                .collect(Collectors.groupingBy(String::length));
 
         List<String> list = map
                 .entrySet()

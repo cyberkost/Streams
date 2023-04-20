@@ -26,7 +26,7 @@ public class Main {
                 .map(student -> {
                     student.setName(student.getName().toUpperCase());
                     return student;
-                }).collect(Collectors.groupingBy(student1 -> student1.getCourse()));
+                }).collect(Collectors.groupingBy(Student::getCourse));
         for (Map.Entry<Integer, List<Student>> entry : map.entrySet()) {
             System.out.println(entry);
         }

@@ -11,6 +11,7 @@ public class Exercise3 {
     public static void main(String[] args) {
         lowerCaseFromFile();
         upperCaseFromFile();
+        countLettersLoop();
     }
 
     private static void lowerCaseFromFile() {
@@ -30,7 +31,7 @@ public class Exercise3 {
 
             System.out.printf("\nКоличество букв в нижнем регистре %d", result);
         } catch (IOException e) {
-            System.err.println(e);
+            System.out.println(e);
         }
     }
 
@@ -49,7 +50,28 @@ public class Exercise3 {
                     .filter(Character::isUpperCase)
                     .count();
 
-            System.out.printf("Количество букв в верхнем регистре %d", result);
+            System.out.printf("\nКоличество букв в верхнем регистре %d", result);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+    }
+
+    private static void countLettersLoop() {
+        try (BufferedReader br = new BufferedReader(new FileReader("book1984.txt"))) {
+            long upperCount = 0;
+            long lowerCount = 0;
+            String line;
+            while ((line = br.readLine()) != null) {
+                for (Character c : line.toCharArray()) {
+                    if (Character.isLetter(c) && Character.isUpperCase(c)) {
+                        upperCount++;
+                    } else if (Character.isLetter(c) && Character.isLowerCase(c)) {
+                        lowerCount++;
+                    }
+                }
+            }
+
+            System.out.printf("\nUppers: %d, lowers: %d\n", upperCount, lowerCount);
         } catch (IOException e) {
             System.err.println(e);
         }
