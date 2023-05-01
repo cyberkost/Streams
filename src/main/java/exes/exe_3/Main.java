@@ -1,4 +1,4 @@
-package exe_3;
+package exes.exe_3;
 
 public class Main {
     public static void main(String[] args) {

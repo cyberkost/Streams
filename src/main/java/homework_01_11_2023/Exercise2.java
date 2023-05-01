@@ -21,6 +21,7 @@ public class Exercise2 {
                     .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
             wordsMap.forEach((a, b) -> System.out.println(a + " : " + b));
         } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

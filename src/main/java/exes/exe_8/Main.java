@@ -1,4 +1,4 @@
-package exe_8;
+package exes.exe_8;
 
 import java.util.stream.IntStream;
 

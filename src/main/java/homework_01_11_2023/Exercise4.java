@@ -1,8 +1,9 @@
 package homework_01_11_2023;
 
-import java.io.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Exercise4 {
 

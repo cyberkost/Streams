@@ -1,8 +1,8 @@
 package homework_01_11_2023;
 
-import java.io.*;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Exercise5 {
 
@@ -23,8 +23,6 @@ public class Exercise5 {
             stringBuilder.reverse();
             fileWriter.write(stringBuilder.toString());
             System.out.println("OK");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

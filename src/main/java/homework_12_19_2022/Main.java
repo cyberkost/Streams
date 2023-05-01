@@ -1,6 +1,5 @@
 package homework_12_19_2022;
 
-import java.io.FilterOutputStream;
 import java.util.Arrays;
 
 //Написать метод который проходится по массиву Int[] умножает каждое четное число на 3 а не четное на 5,

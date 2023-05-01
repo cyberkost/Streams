@@ -1,4 +1,4 @@
-package exe_6;
+package exes.exe_6;
 
 import java.util.Arrays;
 

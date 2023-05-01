@@ -1,4 +1,4 @@
-package exe_7;
+package exes.exe_7;
 
 public class Student {
     private String Name;

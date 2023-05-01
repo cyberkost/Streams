@@ -1,4 +1,4 @@
-package exe_10;
+package exes.exe_10;
 
 import java.util.List;
 import java.util.stream.Collectors;
